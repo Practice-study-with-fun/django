@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>লগইন</title>
+</head>
+<body>
+    <h2>লগইন করুন</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">লগইন</button>
+    </form>
+    <p>নতুন ইউজার? <a href="{% url 'register' %}">রেজিস্টার করুন</a></p>
+</body>
+</html>
